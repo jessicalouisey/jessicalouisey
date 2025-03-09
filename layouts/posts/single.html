@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="window">
+    <div class="window-header">
+        <span>{{ .Title }}</span>
+        <button class="minimize-btn">_</button>
+        <button class="maximize-btn">[]</button>
+        <button class="close-btn">X</button>
+    </div>
+    <div class="window-content">
+        {{ .Content }}  <!-- This is where your post content shows -->
+    </div>
+
+    <div class="resize-handle"></div> 
+
+
+</div>
+{{ end }}

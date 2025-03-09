@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+    <!-- Link to your external JS file -->
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        {{ if not .IsHome }}
+            {{ block "main" . }} 
+            <!-- This will only render for pages that define "main" -->
+            {{ end }}
+        {{ else }}
+            <!-- Custom homepage content goes here -->
+        {{ end }}
+    </main>
+    
+    <!-- Taskbar -->
+    <div id="taskbar">
+        <div class="taskbar-item"><a href="/">Start</a></div>
+        <div class="taskbar-item"><a href="{{ "about/" | relURL }}">About</a></div>
+        <div class="taskbar-item"><a href="{{ "posts/" | relURL }}">Blog</a></div>
+        <div class="taskbar-item"><a href="{{ "contact/" | relURL }}">Contact</a></div>
+        <div class="taskbar-clock" id="current-time"></div>
+    </div>
+
+    <!-- Desktop Area -->
+    <div id="desktop">
+        {{ if eq .Permalink "/" }}  
+  <div class="desktop-icon">
+    <!-- Your icons here -->
+  </div>
+{{ end }}
+
+        <!-- Desktop Icons -->
+        <a href="{{ "about/" | relURL }}" class="desktop-icon-link">
+            <div class="desktop-icon" style="top: 200px; left: 200px;">
+                <img src="/images/lightbulb.png" alt="About">
+                <p>About</p>
+            </div>
+        </a>
+        <a href="{{ "posts/" | relURL }}" class="desktop-icon-link">
+            <div class="desktop-icon" style="top: 200px; left: 100px;">
+                <img src="/images/notepad.png" alt="Blog">
+                <p>Blog</p>
+            </div>
+        </a>
+        <a href="{{ "contact/" | relURL }}" class="desktop-icon-link">
+            <div class="desktop-icon" style="top: 300px; left: 100px;">
+                <img src="/images/letter.png" alt="Contact">
+                <p>Contact</p>
+            </div>
+        </a>
+        <a href="{{ "gallery/" | relURL }}" class="desktop-icon-link">
+            <div class="desktop-icon" style="top: 300px; left: 300px;">
+                <img src="/images/adobe.png" alt="Gallery">
+                <p>Gallery</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

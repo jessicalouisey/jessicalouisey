@@ -1,0 +1,33 @@
+baseURL = "http://localhost:1313/"
+theme = ""  # Set the theme you're using (e.g., ananke)
+  
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  posts = "/posts/:slug/"  # Adjust this to ensure the right URL structure
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 4
+
+[params]
+  summaryLength = 70  # This controls how many words are shown in the summary

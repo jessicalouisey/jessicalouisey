@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: "Courier New", monospace;
+    background: url('/images/desktop-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: red;
+    text-align: center;
+}
+
+/* Taskbar */
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.taskbar-item {
+    background: white;
+
+}
+.taskbar-item:hover {
+    background: yellow;
+   
+}
+
+.taskbar-clock {
+    background: white;
+
+}
+
+.resize-handle {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;  /* Cursor to show resize behavior */
+}
+  /* Desktop Icon Styles */
+/* Desktop Icon Styles */
+.desktop-icon {
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    
+    z-index: 1;
+    position: absolute;
+}
+.desktop-icon img {
+    width: 90px;  /* You can adjust this value if needed */
+    height: 90px; /* Adjust this value as well */
+}
+.desktop-icon p {
+    font-size: 12px;
+    color: white;
+}
+
+/* Window Styles */
+.window {
+    width: 1000px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Minimized window style */
+.window.minimized {
+    width: 200px;
+    height: 50px;
+    padding: 0;
+    overflow: hidden;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Maximized window style */
+.window.maximized {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+.window-header {
+    background: gray;
+    padding: 5px;
+    text-align: right;
+}
+/* Resize handle styles */
+.resize-handle {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize; /* Resize cursor */
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg); /* Diagonal resize arrow */
+}
+
+/* Button styles */
+.window-header button {
+    margin-left: 10px;
+    
+    color: white;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
+.close-btn {
+    background: red;
+    border: none;
+    color: white;
+    padding: 2px 5px;
+}
+.minimize-btn, .maximize-btn {
+    background: green;
+}
+.window-content {
+    background: white;
+    color: black;
+    padding: 10px;
+}
+.resize-handle {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize; /* Change cursor to a diagonal resize */
+      /* Creating the diagonal arrow using borders */
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      border-bottom: 2px solid #fff; /* White arrow color */
+      border-right: 2px solid #fff;  /* White arrow color */
+      transform: rotate(45deg); /* Rotate to make the diagonal arrow */
+  }
