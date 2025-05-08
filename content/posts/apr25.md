@@ -1,0 +1,13 @@
+---
+title: "everything, everywhere"
+date: 2025-04-02
+draft: false
+
+---
+
+As someone who lives mostly inside their head and has a tendency to spiral, existentialism and a touch of absurdism are generally things that keep me going in life. 
+
+Recently I have been watching *The Gift*, a Turkish series focusing on the [Göbekli Tepe](https://whc.unesco.org/en/list/1572/). There was a quote that has been stuck with me ever since:
+> There is no such thing as time. Everything in the universe happens at once. We only perceive things sequentially because that's what we were taught. Yet, every choice we make leads to a new possiblity. We effect everything in a timeless place, even if we don't realise it. (S3 E2)
+
+i am grieving every version of me to have ever existed.

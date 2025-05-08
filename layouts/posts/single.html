@@ -7,6 +7,8 @@
         <button class="close-btn">X</button>
     </div>
     <div class="window-content">
+        <p class="post-meta">Published on {{ .Date.Format "2 January, 2006" }}</p>
+
         {{ .Content }}  <!-- This is where your post content shows -->
     </div>
 

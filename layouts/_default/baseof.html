@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Site.Title }}</title>
     <!-- Link to your external CSS file -->
     <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
@@ -23,9 +23,11 @@
     
     <!-- Taskbar -->
     <div id="taskbar">
-        <div class="taskbar-item"><a href="/">Start</a></div>
+        <div class="taskbar-item" id="start"><a href="/">Start</a></div>
+        <div class="taskbar-separator"></div>
         <div class="taskbar-item"><a href="{{ "about/" | relURL }}">About</a></div>
         <div class="taskbar-item"><a href="{{ "posts/" | relURL }}">Blog</a></div>
+        <div class="taskbar-item"><a href="{{ "gallery/" | relURL }}">Gallery</a></div>
         <div class="taskbar-item"><a href="{{ "contact/" | relURL }}">Contact</a></div>
         <div class="taskbar-clock" id="current-time"></div>
     </div>
@@ -63,6 +65,16 @@
                 <p>Gallery</p>
             </div>
         </a>
-    </div>
+</div>
+<!-- Mobile-only fallback links -->
+<div class="mobile-home-links">
+    <a class="mobile-link" href="{{ "about/" | relURL }}">About</a>
+    <a class="mobile-link" href="{{ "posts/" | relURL }}">Blog</a>
+    <a class="mobile-link" href="{{ "gallery/" | relURL }}">Gallery</a>
+    <a class="mobile-link" href="{{ "contact/" | relURL }}">Contact</a>
+</div>
+
+
+
 </body>
 </html>

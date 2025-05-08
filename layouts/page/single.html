@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jessica Louisey</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body>
+    <div class="about">
+        <h1>{{ .Title }}</h1>
+
+        <div id="taskbar">
+            <div class="taskbar-item" id="flowers_blue">
+                <img src="/images/flowers_blue_transparent.png" alt="" style="width:100px;height:80px; background-color: transparent;">
+            </div>
+            <div class="taskbar-item"><a href="/">Start</a></div>
+            <div class="taskbar-item"><a href="/about/">About</a></div>
+            <div class="taskbar-item"><a href="/posts">Blog</a></div>
+            <div class="taskbar-item"><a href="/contact">Contact</a></div>
+            <div class="taskbar-clock" id="current-time"></div>
+        </div>
+
+        <main>
+            {{ .Content }}
+        </main>
+    </div>
+</body>
+</html>

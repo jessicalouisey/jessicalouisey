@@ -1,0 +1,44 @@
+<!-- Save as layouts/gallery/gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body>
+   
+    <div class="window gallery-window">
+        <div class="window-header">
+            <span class="window-title">{{ .Title }}</span>
+            <button class="minimize-btn">_</button>
+            <button class="maximize-btn">□</button>
+            <button class="close-btn">X</button>
+        </div>
+        <div class="window-content gallery-content">
+            <div class="gallery">
+                {{ range .Resources.ByType "image" }}
+                  <img src="{{ .RelPermalink }}" alt="{{ .Name }}" style="width:300px;height:300px;">
+                {{ end }}
+              </div>
+              
+            </div>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+    
+    <!-- Taskbar -->
+    <div id="taskbar">
+        <div class="taskbar-item" id="flowers_blue">
+            <img src="/images/flowers_blue_transparent.png" alt="" style="width:100px;height:80px; background-color: transparent;">
+        </div>
+        <div class="taskbar-item"><a href="/">Start</a></div>
+        <div class="taskbar-item"><a href="/about/">About</a></div>
+        <div class="taskbar-item"><a href="/posts">Blog</a></div>
+        <div class="taskbar-item"><a href="/gallery">Gallery</a></div>
+        <div class="taskbar-item"><a href="/contact">Contact</a></div>
+        <div class="taskbar-clock" id="current-time"></div>
+    </div>
+</body>
+</html>
