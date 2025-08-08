@@ -31,7 +31,7 @@ body {
 .about {
     font-size: 12px;
     margin: 2rem auto;
-    background: rgb(255, 249, 221, 0.8);
+    background: rgba(255, 253, 245, 0.8);
     color: blue;
     padding: 2rem;
     border: 5px solid blue;
@@ -45,7 +45,7 @@ body {
         max-width: 700px;
         margin: 2rem auto;
         padding: 1rem;
-        background: rgb(255, 249, 221, 0.8);
+        background: rgba(255, 253, 242, 0.8);
       
      
     }
@@ -58,18 +58,23 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgb(255, 249, 221);
+    background: blue;
     border-style: groove;
     border-color: blue;
-    padding: 20px;
+    padding: 0.25em;
     display: flex;
     justify-content: space-around;
     z-index: 1000;
 }
-
+#taskbar a:visited {
+    color: red;
+}
+#taskbar a:active {
+    background: white;
+}
 #start {
     background: blue;
-    padding: 10px;
+    padding: 0.25em;
     color: rgb(255, 249, 221);
 }
 
@@ -82,11 +87,7 @@ body {
     font-weight: 800;
 }
 
-#flowers_blue {
-    width: 10%;
-    height: 10%;
-    background: transparent;
-}
+
 
 /* ===========================
    Desktop Icons
@@ -127,7 +128,7 @@ body {
     z-index: 1000;
     width: 1000px;
     height: 500px;
-    background: rgb(255, 249, 221, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     border: 2px solid blue;
     position: absolute;
     top: 100px;
@@ -199,6 +200,75 @@ body {
 }
 
 /* ===========================
+   Fragments
+=========================== */
+
+#fragments-container {
+  height: 15000px; /* smaller */
+  overflow: auto;
+  border: 1px solid red; /* to visualize */
+  margin: 2em;
+}
+
+
+
+/* Base fragment styles */
+.fragment {
+  border: 1px  #ccc;
+  padding: 1rem;
+  max-width: 40%;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.1);
+  cursor: move;
+  border-radius: 6px;
+  position: absolute;
+  white-space: pre-wrap;
+  user-select: none;
+}
+
+
+
+.fragment .meta {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.redacted {
+  background-color: currentColor;
+  color: currentColor;
+  padding: 0 0.2em;
+  border-radius: 2px;
+}
+
+/* THEMES */
+.theme-yellow {
+  background: #fffdf5;
+  color: #222;
+}
+
+.theme-blue-inverse {
+  background: blue;
+  color: #fffdf5;
+}
+
+.theme-pink {
+  background: #ffeef8;
+  color: blue;
+}
+
+.theme-cream {
+  background: #fefae0;
+  color: blue;
+}
+
+.theme-midnight {
+  background: #fefefe;
+  color: blue;
+}
+
+
+
+/* ===========================
    Gallery
 =========================== */
 .gallery-window {
@@ -206,7 +276,7 @@ body {
     height: 80%;
     top: 10%;
     left: 10%;
-    background: rgb(255, 249, 221, 0.8)
+    background: rgba(255, 255, 255, 0.8)
 }
 
 .gallery-content {
@@ -229,7 +299,7 @@ body {
 
 .gallery-item {
     border: 3px solid blue;
-    background: rgb(255, 249, 221);
+    background: rgb(255, 255, 255);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -265,7 +335,7 @@ body {
     text-align: center;
     font-weight: bold;
     color: blue;
-    background: rgb(245, 239, 211, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-top: 2px solid blue;
 }
 
@@ -277,6 +347,9 @@ ul {
     display: grid;
     text-align: justify;
     padding: 50px;
+    margin: 70px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid blue;
 }
 
 footer {
@@ -354,7 +427,7 @@ footer {
 
     .mobile-home-links a {
         display: block;
-        background: rgb(255, 249, 221);
+        background: rgb(248, 248, 248);
         border: 2px solid blue;
         padding: 1rem;
         text-align: center;
@@ -391,7 +464,7 @@ footer {
         text-align: center;
         padding: 1rem;
         font-size: 1.25rem;
-        background: #f5f5f5;
+        background: #ffffff;
         border: 1px solid #ddd;
         border-radius: 8px;
         text-decoration: none;

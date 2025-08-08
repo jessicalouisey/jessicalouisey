@@ -8,7 +8,16 @@
     <script src="/js/scripts.js" defer></script>
 </head>
 <body>
-   
+       <nav id="taskbar" aria-labelledby="taskbar">
+        <div class="taskbar-item" id="start"><a href="/">Start</a></div>
+        <div class="taskbar-separator"></div>
+        <div class="taskbar-item"><a href="{{ "about/" | relURL }}">about</a></div>
+        <div class="taskbar-item"><a href="{{ "fragments/" | relURL }}">fragmentarium</a></div>
+        <div class="taskbar-item"><a href="{{ "posts/" | relURL }}">blog</a></div>
+        <div class="taskbar-item"><a href="{{ "gallery/" | relURL }}">gallery</a></div>
+        <div class="taskbar-item"><a href="{{ "contact/" | relURL }}">contact</a></div>
+        <div class="taskbar-clock" id="current-time"></div>
+    </nav>
     <div class="window gallery-window">
         <div class="window-header">
             <span class="window-title">{{ .Title }}</span>
@@ -28,17 +37,6 @@
         <div class="resize-handle"></div>
     </div>
     
-    <!-- Taskbar -->
-    <div id="taskbar">
-        <div class="taskbar-item" id="flowers_blue">
-            <img src="/images/flowers_blue_transparent.png" alt="" style="width:100px;height:80px; background-color: transparent;">
-        </div>
-        <div class="taskbar-item"><a href="/">Start</a></div>
-        <div class="taskbar-item"><a href="/about/">About</a></div>
-        <div class="taskbar-item"><a href="/posts">Blog</a></div>
-        <div class="taskbar-item"><a href="/gallery">Gallery</a></div>
-        <div class="taskbar-item"><a href="/contact">Contact</a></div>
-        <div class="taskbar-clock" id="current-time"></div>
-    </div>
+
 </body>
 </html>

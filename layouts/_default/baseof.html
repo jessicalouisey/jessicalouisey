@@ -10,27 +10,28 @@
     <script src="/js/scripts.js" defer></script>
 </head>
 <body>
-    <header></header>
+    <header>jessica louisey</header>
     <main>
         {{ if not .IsHome }}
             {{ block "main" . }} 
             <!-- This will only render for pages that define "main" -->
             {{ end }}
         {{ else }}
-            <!-- Custom homepage content goes here -->
+            <!--  homepage content goes here -->
         {{ end }}
     </main>
     
     <!-- Taskbar -->
-    <div id="taskbar">
+    <nav id="taskbar" aria-labelledby="taskbar">
         <div class="taskbar-item" id="start"><a href="/">Start</a></div>
         <div class="taskbar-separator"></div>
-        <div class="taskbar-item"><a href="{{ "about/" | relURL }}">About</a></div>
-        <div class="taskbar-item"><a href="{{ "posts/" | relURL }}">Blog</a></div>
-        <div class="taskbar-item"><a href="{{ "gallery/" | relURL }}">Gallery</a></div>
-        <div class="taskbar-item"><a href="{{ "contact/" | relURL }}">Contact</a></div>
+        <div class="taskbar-item"><a href="{{ "about/" | relURL }}">about</a></div>
+        <div class="taskbar-item"><a href="{{ "fragments/" | relURL }}">fragmentarium</a></div>
+        <div class="taskbar-item"><a href="{{ "posts/" | relURL }}">blog</a></div>
+        <div class="taskbar-item"><a href="{{ "gallery/" | relURL }}">gallery</a></div>
+        <div class="taskbar-item"><a href="{{ "contact/" | relURL }}">contact</a></div>
         <div class="taskbar-clock" id="current-time"></div>
-    </div>
+    </nav>
 
     <!-- Desktop Area -->
     <div id="desktop">

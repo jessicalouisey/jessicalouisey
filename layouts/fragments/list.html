@@ -1,4 +1,12 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>fragmentarium</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+
     <nav id="taskbar" aria-labelledby="taskbar">
         <div class="taskbar-item" id="start"><a href="/">Start</a></div>
         <div class="taskbar-separator"></div>
@@ -9,21 +17,10 @@
         <div class="taskbar-item"><a href="{{ "contact/" | relURL }}">contact</a></div>
         <div class="taskbar-clock" id="current-time"></div>
     </nav>
-<div class="window">
-    <div class="window-header">
-        <span>{{ .Title }}</span>
-        <button class="minimize-btn">_</button>
-        <button class="maximize-btn">[]</button>
-        <button class="close-btn">X</button>
-    </div>
-    <div class="window-content">
-        <p class="post-meta">Published on {{ .Date.Format "2 January, 2006" }}</p>
 
-        {{ .Content }}  <!-- This is where your post content shows -->
-    </div>
-
-    <div class="resize-handle"></div> 
-
-
-</div>
-{{ end }}
+<body>
+  <h1 style="font-size: 12px; justify-content: center;">fragments of a life half-lived</h1>
+  <div id="fragments-container"></div>
+  <script src="/js/fragments.js"></script>
+</body>
+</html>
