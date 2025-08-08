@@ -28,6 +28,8 @@
   </url><url>
     <loc>https://example.org/categories/</loc>
   </url><url>
+    <loc>https://example.org/fragments/</loc>
+  </url><url>
     <loc>https://example.org/blog/</loc>
   </url><url>
     <loc>https://example.org/tags/</loc>
